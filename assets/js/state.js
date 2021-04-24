@@ -1,9 +1,12 @@
-let count__down = document.querySelector('.count__down');
 let state = document.querySelector('.state');
 let info = state.querySelector('.info');
 let player__list = state.querySelector('.player__list');
 let name__form = state.querySelector('.name__form');
 let name__field = name__form.querySelector('.name__field');
+
+let game__over = document.querySelector('.game__over');
+let count__down = game__over.querySelector('.count__down');
+
 name__field.value = localStorage.getItem('name');;
 
 function isData(state = false){
@@ -15,7 +18,8 @@ function isData(state = false){
 function gameOver(){
   localStorage.setItem('isRun', false);
   let count = 0;
-  let timeLife = setInterval(() => {
+  game__over.classList.toggle('hiden');
+  setInterval(() => {
     count++;
     count__down.innerHTML = `${count}`;
 

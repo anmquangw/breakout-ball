@@ -17,22 +17,22 @@ li{list-style: none;}
 	border-radius: 15px;
 }
 
-.count__down{
-	font-size: 250px;
-	font-weight: bold;
-	color: #E8E8E8;
+
+.game__over{
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 99999;
+	color: #E8E8E8;
+	font-weight: bold;
 }
 
-.count__down::before{
-	content: 'GAME OVER';
-	position: absolute;
-	font-size: 12px;
-	top: 0;
-	left: 0;
-	color: #000;
+.game__over--title{
+	font-size: 100px;
+}
+
+.count__down{
+	font-size: 250px;
+	text-align: center;
 }
