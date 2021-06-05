@@ -17,6 +17,8 @@ function isData(state = false){
 
 function gameOver(){
   localStorage.setItem('isRun', false);
+  localStorage.setItem('total', score);
+  control();
   let count = 0;
   game__over.classList.remove('hiden');
   setInterval(() => {

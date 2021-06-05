@@ -12,7 +12,7 @@
 }
 
 .mng{
-	background: #fff;
+	background: url(../img/bg-player.jpg) center/cover;
 	width: 70vw;
 	height: 600px;
 	border-radius: 15px;
@@ -24,8 +24,15 @@
 	position: absolute;
 }
 .player__list{
-	margin-top: 24px;
-
+	background: url(../img/lst.jpg) center/cover;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  margin-top: 24px;
+  overflow-y: scroll;
+  height: 72%;
 }
 
 .player__item{
@@ -34,7 +41,6 @@
 	text-align: center;
 	position: relative;
 }
-
 .time{
 	position: absolute;
 	top: 0;
@@ -42,6 +48,7 @@
 	transition: .5s;
 	display: none;
 	border-radius: 5px;
+	z-index: 999999999;
 }
 
 .player__item:hover .time{
@@ -53,10 +60,15 @@
 }
 
 .player__item:nth-child(1){
+	background-color: #06FF00;
 	font-size: 2rem;
 	font-weight: bold;
 	text-align: center;
-	position: relative;
+	position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  color: #F4FB00;
 }
 
 .player__item:nth-child(1) > .achi0::before{
